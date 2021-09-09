@@ -20,7 +20,7 @@ video_mimetype = [
 
 @app.on_message(filters.incoming & filters.command(['start', 'help']))
 def help_message(app, message):
-    message.reply_text(f"Merhaba {message.from_user.mention()}\nTelegramda sesi olmayan videoları kodlayabilirim, şimdi bana sesi olmayan bir video gönder. Kanallarımıza giriş için @filmcee 👈 ve @hextr 👈", quote=True)
+    message.reply_text(f"Merhaba {message.from_user.mention()}\nŞimdi bana sesi olmayan bir video gönder. Kanallarımıza giriş için @filmcee👈 ve @hextr👈 kanallarını kullanabilirsin", quote=True)
 
 @app.on_message(filters.user(sudo_users) & filters.incoming & (filters.video | filters.document))
 def encode_video(app, message):
